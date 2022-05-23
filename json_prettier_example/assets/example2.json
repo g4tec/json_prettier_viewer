@@ -1,0 +1,33 @@
+{
+    "Período": "99/99/99 a 99/99/99",
+    "Total de Vendas no período": "99.999,99",
+    "Fabricante": "ABCD (CNPJ: XX.XXX.XXX/XXXX-XX)",
+    "Vendas": {
+        "Total de Vendas": "77.777,77",
+        "Cliente": "Vera Confecções (CNPJ: XX.XXX.XXX/XXXX-XX)",
+        "Total Vendas": " 33.333,33",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "Cliente": "Neves Confecções (CNPJ: XX.XXX.XXX/XXXX-XX)",
+        "Total vendas": "44.444,44",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11"
+    },
+    "Fabricante": "XYZ (CNPJ CNPJ: XX.XXX.XXX/XXXX-XX)",
+    "Vendas": {
+        "Cliente": "Azul Confecções (CNPJ: XX.XXX.XXX/XXXX-XX)",
+        "Vendas no Período 99/99/99 a 99/99/99": "99.999,99",
+        "Total vendas": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11",
+        "99/99/99": "11.111,11"
+    }
+}

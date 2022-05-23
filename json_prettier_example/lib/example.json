@@ -1,0 +1,42 @@
+{
+    "data": [
+        {
+            "Cliente": "Madam Madam",
+            "Pedido": 1000,
+            "valores": {
+                "em aberto": 5000,
+                "Vencido": 3000,
+                "A vencer": 4000,
+                "Titulos": [
+                    {
+                        "Valor": 1000,
+                        "Vencimento": "20/90/09"
+                    },
+                    {
+                        "Valor": 1000,
+                        "Vencimento": "20/90/09"
+                    }
+                ]
+            }
+        },
+        {
+            "Cliente": "Madam Madam",
+            "Pedido": 1000,
+            "valores": {
+                "em aberto": 5000,
+                "Vencido": 3000,
+                "A vencer": 4000,
+                "Titulos": [
+                    {
+                        "Valor": 1000,
+                        "Vencimento": "20/90/09"
+                    },
+                    {
+                        "Valor": 1000,
+                        "Vencimento": "20/90/09"
+                    }
+                ]
+            }
+        }
+    ]
+}
