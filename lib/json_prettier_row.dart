@@ -5,7 +5,7 @@ class JsonPrettierViewerRow extends StatelessWidget {
   final TextStyle? style;
   final TextStyle? keStyle;
   final TextStyle? valueStyle;
-  final Widget? separator;
+  final String? separator;
   const JsonPrettierViewerRow({
     Key? key,
     required this.row,
@@ -17,15 +17,12 @@ class JsonPrettierViewerRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          '${row.key}',
-          style: keStyle ?? style,
-        ),
-        separator ?? const Text(": "),
-        Text('${row.value}', style: valueStyle ?? style),
-      ],
-    );
+    return RichText(
+        textAlign: TextAlign.start,
+        text: TextSpan(children: [
+          TextSpan(text: row.key, style: keStyle ?? style),
+          TextSpan(text: separator ?? ": ", style: keStyle ?? style),
+          TextSpan(text: row.value.toString(), style: valueStyle ?? style),
+        ]));
   }
 }

@@ -1,0 +1,58 @@
+{
+    "Período": "99/99/99",
+    "Total de venda ": "99.999,99",
+    "Referencias": [
+        {
+            "Referencia": "00 101 0000555 - Camisa Básica",
+            "Total da Referência": "77.777.77",
+            "Dias": [
+                {
+                    "Venda do dia": "99/99/99 - 22.222,22",
+                    "Clientes": [
+                        {
+                            "Cliente": "AABBB (CNPJ: XX.XXX.XXX/XXXX-XX) - 11.111,11"
+                        },
+                        {
+                            "Cliente": "H2Y (CNPJ: XX.XXX.XXX/XXXX-XX) - 11.111,11"
+                        }
+                    ]
+                },
+                {
+                    "Venda do dia": "99/99/99 - 44.444,44",
+                    "Clientes": [
+                        {
+                            "Cliente": "DDAAVV (CNPJ: XX.XXX.XXX/XXXX-XX) - 22.222,22"
+                        },
+                        {
+                            "Cliente": "MAIS NAIS (CNPJ: XX.XXX.XXX/XXXX-XX) - 11.111,11"
+                        },
+                        {
+                            "Cliente": "FGTH (CNPJ: XX.XXX.XXX/XXXX-XX) - 11.111,11"
+                        }
+                    ]
+                },
+                {
+                    "Venda do dia": "99/99/99 - 11.111,11",
+                    "Cliente": "AMESS (CNPJ: XX.XXX.XXX/XXXX-XX) - 11.111,11"
+                }
+            ]
+        },
+        {
+            "Referencia": "04 103 0000321 - Calça Masculina USTop",
+            "Total da Referência": "22.222.22",
+            "Dias de vendas": [
+                {
+                    "Venda do dia": "99/99/99 - 22.222,22",
+                    "Clientes": [
+                        {
+                            " Cliente": "KKKKK (CNPJ: XX.XXX.XXX/XXXX-XX) - 11.111,11"
+                        },
+                        {
+                            " Cliente": "WOW (CNPJ: XX.XXX.XXX/XXXX-XX) - 11.111,11"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
