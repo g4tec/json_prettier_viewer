@@ -34,6 +34,7 @@ class _JsonPrettierViewerState extends State<JsonPrettierViewer> {
         JsonPrettierObject(
           object: widget.json,
           title: "",
+          disableExpand: true,
           style: widget.style,
           keStyle: widget.keStyle,
           valueStyle: widget.valueStyle,

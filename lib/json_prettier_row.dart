@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:json_prettier_viewer/utils/string_captalization.dart';
 
 class JsonPrettierViewerRow extends StatelessWidget {
   final MapEntry row;
@@ -20,7 +21,8 @@ class JsonPrettierViewerRow extends StatelessWidget {
     return RichText(
         textAlign: TextAlign.start,
         text: TextSpan(children: [
-          TextSpan(text: row.key, style: keStyle ?? style),
+          TextSpan(
+              text: (row.key.toString()).capitalize(), style: keStyle ?? style),
           TextSpan(text: separator ?? ": ", style: keStyle ?? style),
           TextSpan(text: row.value.toString(), style: valueStyle ?? style),
         ]));

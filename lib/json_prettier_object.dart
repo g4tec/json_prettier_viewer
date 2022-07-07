@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:json_prettier_viewer/json_prettier_row.dart';
+import 'package:json_prettier_viewer/utils/string_captalization.dart';
 
 class JsonPrettierObject extends StatefulWidget {
   final Map<String, dynamic> object;
@@ -9,6 +10,7 @@ class JsonPrettierObject extends StatefulWidget {
   final TextStyle? valueStyle;
   final String? title;
   final bool usePrimaryColor;
+  final bool disableExpand;
   const JsonPrettierObject({
     Key? key,
     required this.object,
@@ -18,6 +20,7 @@ class JsonPrettierObject extends StatefulWidget {
     this.keStyle,
     this.valueStyle,
     this.usePrimaryColor = true,
+    this.disableExpand = false,
   }) : super(key: key);
 
   @override
@@ -89,7 +92,7 @@ class _JsonPrettierObjectState extends State<JsonPrettierObject> {
     if (justFirst && (rows).isEmpty) {
       return [
         Text(
-          widget.title ?? " - ",
+          (widget.title ?? " - ").capitalize(),
           style: widget.titleStyle?.copyWith(
             color: widget.usePrimaryColor
                 ? Theme.of(context).primaryColor
@@ -110,36 +113,39 @@ class _JsonPrettierObjectState extends State<JsonPrettierObject> {
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: InkWell(
         onTap: (() => setState(() => isExpanded = !isExpanded)),
-        child: isExpanded
+        child: widget.disableExpand || isExpanded
             ? Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      rows.isNotEmpty
-                          ? Icon(
-                              Icons.expand_more_sharp,
-                              color: widget.titleStyle?.color,
-                            )
-                          : const SizedBox(
-                              width: 24,
-                            ),
-                      Expanded(
-                        child: widget.title != null
-                            ? Text(
-                                widget.title!,
-                                style: widget.titleStyle?.copyWith(
-                                  color: widget.usePrimaryColor
-                                      ? Theme.of(context).primaryColor
-                                      : Theme.of(context).colorScheme.secondary,
-                                ),
+                  if (!widget.disableExpand)
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        rows.isNotEmpty
+                            ? Icon(
+                                Icons.expand_more_sharp,
+                                color: widget.titleStyle?.color,
                               )
-                            : rowTitle,
-                      ),
-                    ],
-                  ),
+                            : const SizedBox(
+                                width: 24,
+                              ),
+                        Expanded(
+                          child: widget.title != null
+                              ? Text(
+                                  widget.title!.capitalize(),
+                                  style: widget.titleStyle?.copyWith(
+                                    color: widget.usePrimaryColor
+                                        ? Theme.of(context).primaryColor
+                                        : Theme.of(context)
+                                            .colorScheme
+                                            .secondary,
+                                  ),
+                                )
+                              : rowTitle,
+                        ),
+                      ],
+                    ),
                   Padding(
                     padding: const EdgeInsets.only(left: 24),
                     child: Column(
@@ -164,7 +170,7 @@ class _JsonPrettierObjectState extends State<JsonPrettierObject> {
                   Flexible(
                     child: widget.title != null
                         ? Text(
-                            widget.title!,
+                            widget.title!.capitalize(),
                             style: widget.titleStyle?.copyWith(
                               color: widget.usePrimaryColor
                                   ? Theme.of(context).primaryColor
